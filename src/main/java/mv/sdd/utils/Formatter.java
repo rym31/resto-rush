@@ -3,7 +3,7 @@ package mv.sdd.utils;
 import mv.sdd.model.Client;
 import mv.sdd.model.EtatClient;
 import mv.sdd.model.MenuPlat;
-import mv.sdd.model.Stats;
+
 
 public final class Formatter {
 

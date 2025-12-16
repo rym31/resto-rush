@@ -1,4 +1,21 @@
 ========== RUSH AU RESTO ==========
-🍽️ Lecture des actions : data/scenario_simple.txt
+🍽️ Lecture des actions : data/scenario_2.txt
 
+[⏱️] Service = 10 min, 👨‍🍳 = 1
+[🚪 t=0] 🧍 Client #1 "Alice" (pat=5)
+[📥 t=0] Cmd #1 (Pizza fromage) → Alice
+⏩ AVANCER_TEMPS; 1
+[🍳 t=1] Cmd #1 commence (3 min)
+[t=1] 👥1 😋0 😡0 📥0 🍳1
+⏩ AVANCER_TEMPS; 2
+📈 AFFICHER_STATS
+[t=3] 📊 Stats
+	Clients totaux : 1
+	😋 Servis		: 0
+	😡 Fâchés		: 0
+	💰 Chiffre d'affaires : 0,00 $
+	Plats vendus :
+		PIZZA : 0
+		BURGER : 0
+		FRITES : 0
 ===================================

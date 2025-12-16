@@ -2,6 +2,10 @@ package mv.sdd;
 
 import mv.sdd.io.Action;
 import mv.sdd.io.ActionFileReader;
+import mv.sdd.model.Client;
+import mv.sdd.model.Commande;
+import mv.sdd.model.Horloge;
+import mv.sdd.model.Stats;
 import mv.sdd.sim.Restaurant;
 import mv.sdd.utils.Constantes;
 import mv.sdd.utils.Logger;
@@ -9,13 +13,17 @@ import mv.sdd.utils.Logger;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.Queue;
 
 /**
  * 420-311 : STRUCTURE DE DONNÉES
  * ÉPREUVE FINALE : VOLET 1
  *
- * @author VOTRE NOM ET PRENOM
+ * @author Souane Aicha-Rym
  */
 public class App {
     public static void main( String[] args ) {
@@ -36,7 +44,13 @@ public class App {
 
             List<Action> actions = ActionFileReader.readActions(actionsFile);
 
-            Restaurant restaurant = new Restaurant(logger);
+            Horloge horloge = new Horloge();
+            Stats stats = new Stats(horloge);
+            Map<Integer, Client> clients = new HashMap<>();
+            Queue<Commande> fileCuisine = new LinkedList<>();
+            List<Commande> enPreparation = new LinkedList<>();
+            
+            Restaurant restaurant = new Restaurant(logger, horloge, stats, clients, fileCuisine, enPreparation, null, 0, false);
 
             for (Action action : actions) {
                 restaurant.executerAction(action);
