@@ -1,5 +1,7 @@
 # Épreuve finale – Simulation de restaurant (Structures de données & Threads)
 
+**Repo:** https://github.com/rym31/resto-rush
+
 Ce dépôt contient le **squelette de code** pour le premier volet de l’épreuve finale du cours de **Structures de données**.
 
 ## 1. Objectif
@@ -25,8 +27,8 @@ L’énoncé complet de l’épreuve (contexte, règles, format exact des sortie
 ## 3. Cloner le projet
 
 ```bash
-git clone https://github.com/la-sarita/Epreuve_finale_420_311.git
-cd Epreuve_finale_420_311
+git clone https://github.com/rym31/resto-rush.git
+cd resto-rush
 
 ## 4. Structure du projet
 
